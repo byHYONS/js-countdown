@@ -24,6 +24,8 @@ btnStart.addEventListener('click', function(){
     clock = setInterval(messageOutput, sec * 1_000);
 
     let count = countDown;
+
+    // definisco la funzione:
     function messageOutput() {
     console.log(count);
 
