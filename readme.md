@@ -12,7 +12,23 @@ Mostrate il conteggio alla rovescia in pagina;
 Aggiungete un bottone che interrompe il count down e mostra il messaggio.
 
 ## Svolgimento:
+1. dichiaro variabili utility, andando a leggere nel DOM gli elementi che mi servono per far partire il conto alla rovescia, il bottone per interrompere il timer e dove verrà visualizzato il countdown e il messaggio;
 
+2. vado in asscolto del bottone `Inizia`, dove farò partire un countdown adoperando `setInterval()`con cadenza di un secondo, imposterò un conto `= 10` e lo decrementerò con `count--`, tramite una istruzione condizionale manderò a schermo il countdown e/o il messaggio, inoltre, quando `count === 0` interromperò la funzione:
+```
+if (count === 0) {
+        clearInterval(clock);
+        message.textContent = 'Buon Anno!';   
+    } else {
+        message.textContent = count;
+    }
+```
+
+3. vado in ascolto del bottone `Interrompi` dove per mezzo della funzione `clearInterval()` andrò ad interrompere il countdown e mandero a schermo il messaggio:
+```
+    clearInterval(clock);
+    message.textContent = 'Buon Anno!';
+```
 
 
 ##### FINE
